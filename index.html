@@ -2,39 +2,12 @@
 <head>
 	<title>data directive</title>
 
-
+	<link rel="stylesheet" type="text/css" href="bower_components/ionic/release/css/ionic.css">
 </head>
 <body ng-app="test-app" ng-init="apiBaseUrl = 'http://localhost:2403/'">
 
 
-	<fab-data 
-		fab-data-property="wines" 
-		fab-data-src="{{ apiBaseUrl }}wines"
-	>
-		<ng-include src="'wines.html'"></ng-include>
-	</fab-data>
-
-	<div 
-		ng-init="wineId = 'a131627b4d66a8e9';"
-
-		fab-data="wine" 
-		fab-data-src="{{ apiBaseUrl }}wines/{{ wineId }}"
-	>
-
-		<h1>{{ wine.name }}</h1>
-		<h2>{{ wine.id }}</h2>
-
-
-		<form>
-			<input ng-model="wine.name">
-
-
-			<button type="submit">send</button>
-		</form>
-	</div>
-
-
-
+	<ng-include src="'page.html'"></ng-include>
 
 
 

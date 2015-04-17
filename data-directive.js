@@ -6,18 +6,6 @@ angular.module('dd', ['ngResource'])
 
 	return {
 		restrict: 'AE',
-		controller: function ($scope) {
-			$scope.abilities = [];
-
-			this.addStrength = function () {
-				$scope.abilities.push('strength');
-			}
-
-			this.addSpeed = function () {
-				$scope.abilities.push('speed');
-			}
-		},
-
 		link: function (scope, element, attrs, ctrls, transclude) {
 
 			// // build a resource object
